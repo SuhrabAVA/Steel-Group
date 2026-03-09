@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steel Group — Лента</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <iframe class="sidebar-frame" src="sidebar.html" title="Левое меню"></iframe>
+
+    <main class="feed-page">
+      <section class="stories-card">
+        <h1>Проекты в работе</h1>
+        <div class="stories-row">
+          <button class="story" data-story="0">
+            <span class="story__ring"><img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Сварка" /></span>
+            <span class="story__label">Сварка</span>
+          </button>
+          <button class="story" data-story="1">
+            <span class="story__ring"><img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Резка" /></span>
+            <span class="story__label">Резка</span>
+          </button>
+          <button class="story" data-story="2">
+            <span class="story__ring"><img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Цех" /></span>
+            <span class="story__label">Цех</span>
+          </button>
+          <button class="story" data-story="3">
+            <span class="story__ring"><img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Покраска" /></span>
+            <span class="story__label">Покраска</span>
+          </button>
+          <button class="story" data-story="4">
+            <span class="story__ring"><img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Гибка" /></span>
+            <span class="story__label">Гибка</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="post-card">
+        <header class="post-card__header">
+          <div class="post-author">
+            <div class="avatar">SG</div>
+            <div>
+              <div class="post-author__name">Steel Group</div>
+              <div class="post-author__meta">Сварка</div>
+            </div>
+          </div>
+          <button class="more-btn" aria-label="Ещё">
+            <span></span><span></span><span></span>
+          </button>
+        </header>
+
+        <div class="post-media">
+          <img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Пост о сварке" />
+          <button class="media-nav media-nav--next" aria-label="Следующее изображение">&#8250;</button>
+        </div>
+
+        <div class="media-dots">
+          <span class="media-dots__dot media-dots__dot--active"></span>
+          <span class="media-dots__dot"></span>
+        </div>
+
+        <div class="post-actions">
+          <div class="post-actions__left">
+            <button class="icon-btn" aria-label="Нравится">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"></path>
+              </svg>
+            </button>
+            <button class="icon-btn" aria-label="Комментарий">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </button>
+            <button class="icon-btn" aria-label="Поделиться">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2 11 13"></path>
+                <path d="M22 2 15 22 11 13 2 9 22 2z"></path>
+              </svg>
+            </button>
+          </div>
+          <button class="icon-btn" aria-label="Сохранить">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="post-body">
+          <div class="likes-count">1247 отметок "Нравится"</div>
+          <p class="caption"><strong>Steel Group</strong> Качественная аргонная сварка металлоконструкций. Выполнено для промышленного объекта. Гарантия на все виды работ! 🔥</p>
+        </div>
+      </section>
+
+      <section class="post-card post-card--comments">
+        <header class="post-card__header">
+          <div class="post-author">
+            <div class="avatar">SG</div>
+            <div>
+              <div class="post-author__name">Steel Group</div>
+              <div class="post-author__meta">Резка</div>
+            </div>
+          </div>
+          <button class="more-btn" aria-label="Ещё">
+            <span></span><span></span><span></span>
+          </button>
+        </header>
+
+        <div class="post-media post-media--small">
+          <img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Пост о резке" />
+        </div>
+
+        <div class="media-dots">
+          <span class="media-dots__dot media-dots__dot--active"></span>
+          <span class="media-dots__dot"></span>
+        </div>
+
+        <div class="post-actions">
+          <div class="post-actions__left">
+            <button class="icon-btn" aria-label="Нравится">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"></path>
+              </svg>
+            </button>
+            <button class="icon-btn" aria-label="Комментарий">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </button>
+            <button class="icon-btn" aria-label="Поделиться">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2 11 13"></path>
+                <path d="M22 2 15 22 11 13 2 9 22 2z"></path>
+              </svg>
+            </button>
+          </div>
+          <button class="icon-btn" aria-label="Сохранить">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="post-body post-body--comments">
+          <div class="likes-count">1247 отметок "Нравится"</div>
+          <p class="caption"><strong>Steel Group</strong> Качественная аргонная сварка металлоконструкций. Выполнено для промышленного объекта. Гарантия на все виды работ! 🔥</p>
+
+          <div class="comments">
+            <div class="comment">
+              <div class="comment__avatar"></div>
+              <div>
+                <div class="comment__text"><strong>metallurg_pro</strong> Отличная работа! Какая толщина металла?</div>
+                <div class="comment__time">2ч</div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="comment__avatar"></div>
+              <div>
+                <div class="comment__text"><strong>welding_master</strong> Профессионально выполнено 👍</div>
+                <div class="comment__time">5ч</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-form">
+            <input type="text" placeholder="Добавьте комментарий..." />
+            <button type="button">Опубликовать</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="story-modal" id="storyModal" aria-hidden="true">
+    <div class="story-modal__overlay"></div>
+    <div class="story-modal__content">
+      <div class="story-progress" id="storyProgress"></div>
+      <div class="story-modal__top">
+        <div class="story-modal__author">
+          <div class="avatar avatar--small">SG</div>
+          <div>
+            <div class="post-author__name">Steel Group</div>
+            <div class="post-author__meta" id="storyMeta">Сварка</div>
+          </div>
+        </div>
+        <button class="story-close" id="storyClose" aria-label="Закрыть">×</button>
+      </div>
+      <img id="storyImage" src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="История" />
+      <div class="story-modal__caption" id="storyCaption">Аргонная сварка металлоконструкций</div>
+      <button class="story-switch story-switch--prev" id="storyPrev" aria-label="Предыдущая история">&#8249;</button>
+      <button class="story-switch story-switch--next" id="storyNext" aria-label="Следующая история">&#8250;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
