@@ -139,3 +139,32 @@ commentToggleButtons.forEach((button) => {
     commentsBlock.hidden = isExpanded;
   });
 });
+
+const carouselRoot = document.querySelector('[data-carousel-root]');
+const carouselTrack = carouselRoot?.querySelector('.js-post-carousel');
+const carouselDots = carouselRoot?.parentElement?.querySelectorAll('[data-carousel-dots] .media-dots__dot') || [];
+const carouselPrev = carouselRoot?.querySelector('.media-nav--prev');
+const carouselNext = carouselRoot?.querySelector('.media-nav--next');
+
+let carouselIndex = 0;
+
+function setCarouselIndex(index) {
+  if (!carouselTrack) return;
+  const slides = carouselTrack.querySelectorAll('img');
+  const maxIndex = slides.length - 1;
+  carouselIndex = Math.max(0, Math.min(index, maxIndex));
+  carouselTrack.scrollTo({
+    left: carouselTrack.clientWidth * carouselIndex,
+    behavior: 'smooth'
+  });
+  carouselDots.forEach((dot, dotIndex) => {
+    dot.classList.toggle('media-dots__dot--active', dotIndex === carouselIndex);
+  });
+}
+
+carouselPrev?.addEventListener('click', () => setCarouselIndex(carouselIndex - 1));
+carouselNext?.addEventListener('click', () => setCarouselIndex(carouselIndex + 1));
+
+carouselDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => setCarouselIndex(index));
+});

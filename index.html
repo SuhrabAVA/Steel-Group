@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="layout">
-    <iframe class="sidebar-frame" src="sidebar.html" title="Левое меню"></iframe>
+    <iframe class="sidebar-frame" src="sidebar.html?current=feed" title="Левое меню"></iframe>
 
     <main class="feed-page">
       <section class="stories-card">
@@ -51,14 +51,18 @@
           </button>
         </header>
 
-        <div class="post-media">
-          <img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Пост о сварке" />
+        <div class="post-media" data-carousel-root>
+          <div class="post-media__carousel js-post-carousel">
+            <img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Пост о сварке 1" />
+            <img src="https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg" alt="Пост о сварке 2" />
+          </div>
+          <button class="media-nav media-nav--prev" aria-label="Предыдущее изображение">&#8249;</button>
           <button class="media-nav media-nav--next" aria-label="Следующее изображение">&#8250;</button>
         </div>
 
-        <div class="media-dots">
-          <span class="media-dots__dot media-dots__dot--active"></span>
-          <span class="media-dots__dot"></span>
+        <div class="media-dots" data-carousel-dots>
+          <button class="media-dots__dot media-dots__dot--active" type="button" aria-label="Изображение 1"></button>
+          <button class="media-dots__dot" type="button" aria-label="Изображение 2"></button>
         </div>
 
         <div class="post-actions">
