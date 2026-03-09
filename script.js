@@ -1,27 +1,27 @@
 const stories = [
   {
     title: 'Сварка',
-    image: 'assets/post1.png',
+    image: 'https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg',
     caption: 'Аргонная сварка металлоконструкций для промышленного объекта.'
   },
   {
     title: 'Резка',
-    image: 'assets/post2.png',
+    image: 'https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg',
     caption: 'Точная резка листового металла и подготовка деталей к сборке.'
   },
   {
     title: 'Цех',
-    image: 'assets/story3.png',
+    image: 'https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg',
     caption: 'Производственный цех с готовыми заготовками и деталями.'
   },
   {
     title: 'Покраска',
-    image: 'assets/story4.png',
+    image: 'https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg',
     caption: 'Этап порошковой покраски и финишной обработки изделий.'
   },
   {
     title: 'Гибка',
-    image: 'assets/story5.png',
+    image: 'https://metallsnab.kz/wp-content/uploads/2017/11/rezka3.jpg',
     caption: 'Гибка металла по техническим размерам и проектным чертежам.'
   }
 ];
@@ -121,4 +121,21 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeStory();
   if (event.key === 'ArrowRight') renderStory(currentStory + 1);
   if (event.key === 'ArrowLeft') renderStory(currentStory - 1);
+});
+
+
+const commentToggleButtons = document.querySelectorAll('.js-comment-toggle');
+
+commentToggleButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const targetId = button.dataset.commentTarget;
+    if (!targetId) return;
+
+    const commentsBlock = document.getElementById(targetId);
+    if (!commentsBlock) return;
+
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!isExpanded));
+    commentsBlock.hidden = isExpanded;
+  });
 });
