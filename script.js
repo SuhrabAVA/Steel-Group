@@ -142,29 +142,51 @@ commentToggleButtons.forEach((button) => {
 
 const carouselRoot = document.querySelector('[data-carousel-root]');
 const carouselTrack = carouselRoot?.querySelector('.js-post-carousel');
-const carouselDots = carouselRoot?.parentElement?.querySelectorAll('[data-carousel-dots] .media-dots__dot') || [];
-const carouselPrev = carouselRoot?.querySelector('.media-nav--prev');
-const carouselNext = carouselRoot?.querySelector('.media-nav--next');
+const carouselDotsRoot = document.querySelector('[data-carousel-dots]');
 
 let carouselIndex = 0;
 
 function setCarouselIndex(index) {
   if (!carouselTrack) return;
   const slides = carouselTrack.querySelectorAll('img');
-  const maxIndex = slides.length - 1;
+  const maxIndex = Math.max(0, slides.length - 1);
   carouselIndex = Math.max(0, Math.min(index, maxIndex));
   carouselTrack.scrollTo({
     left: carouselTrack.clientWidth * carouselIndex,
     behavior: 'smooth'
   });
-  carouselDots.forEach((dot, dotIndex) => {
+  const dots = carouselDotsRoot?.querySelectorAll('.media-dots__dot') || [];
+  dots.forEach((dot, dotIndex) => {
     dot.classList.toggle('media-dots__dot--active', dotIndex === carouselIndex);
   });
 }
 
-carouselPrev?.addEventListener('click', () => setCarouselIndex(carouselIndex - 1));
-carouselNext?.addEventListener('click', () => setCarouselIndex(carouselIndex + 1));
+function buildCarouselDots() {
+  if (!carouselTrack || !carouselDotsRoot) return;
+  const slides = carouselTrack.querySelectorAll('img');
+  carouselDotsRoot.innerHTML = '';
 
-carouselDots.forEach((dot, index) => {
-  dot.addEventListener('click', () => setCarouselIndex(index));
+  slides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'media-dots__dot';
+    dot.setAttribute('aria-label', `Изображение ${index + 1}`);
+    dot.addEventListener('click', () => setCarouselIndex(index));
+    carouselDotsRoot.appendChild(dot);
+  });
+
+  setCarouselIndex(0);
+}
+
+carouselTrack?.addEventListener('scroll', () => {
+  const slideWidth = carouselTrack.clientWidth || 1;
+  const nextIndex = Math.round(carouselTrack.scrollLeft / slideWidth);
+  if (nextIndex === carouselIndex) return;
+  carouselIndex = nextIndex;
+  const dots = carouselDotsRoot?.querySelectorAll('.media-dots__dot') || [];
+  dots.forEach((dot, dotIndex) => {
+    dot.classList.toggle('media-dots__dot--active', dotIndex === carouselIndex);
+  });
 });
+
+buildCarouselDots();
