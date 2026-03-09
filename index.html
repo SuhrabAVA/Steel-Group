@@ -68,7 +68,7 @@
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"></path>
               </svg>
             </button>
-            <button class="icon-btn" aria-label="Комментарий">
+            <button class="icon-btn js-comment-toggle" aria-label="Комментарий" data-comment-target="comments-post-1" aria-expanded="false">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
               </svg>
@@ -90,6 +90,37 @@
         <div class="post-body">
           <div class="likes-count">1247 отметок "Нравится"</div>
           <p class="caption"><strong>Steel Group</strong> Качественная аргонная сварка металлоконструкций. Выполнено для промышленного объекта. Гарантия на все виды работ! 🔥</p>
+
+          <div class="post-comments" id="comments-post-1" hidden>
+            <div class="comments">
+              <div class="comment">
+                <div class="comment__avatar"></div>
+                <div>
+                  <div class="comment__text"><strong>metallurg_pro</strong> Отличная геометрия шва, выглядит очень аккуратно!</div>
+                  <div class="comment__time">1ч</div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment__avatar"></div>
+                <div>
+                  <div class="comment__text"><strong>steel_kz</strong> Можно узнать сроки выполнения таких заказов?</div>
+                  <div class="comment__time">3ч</div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment__avatar"></div>
+                <div>
+                  <div class="comment__text"><strong>weld_expert</strong> Профессиональный подход, видно сразу 👏</div>
+                  <div class="comment__time">4ч</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment-form">
+              <input type="text" placeholder="Добавьте комментарий..." />
+              <button type="button">Опубликовать</button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -123,7 +154,7 @@
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"></path>
               </svg>
             </button>
-            <button class="icon-btn" aria-label="Комментарий">
+            <button class="icon-btn js-comment-toggle" aria-label="Комментарий" data-comment-target="comments-post-2" aria-expanded="false">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
               </svg>
@@ -146,26 +177,35 @@
           <div class="likes-count">1247 отметок "Нравится"</div>
           <p class="caption"><strong>Steel Group</strong> Качественная аргонная сварка металлоконструкций. Выполнено для промышленного объекта. Гарантия на все виды работ! 🔥</p>
 
-          <div class="comments">
-            <div class="comment">
-              <div class="comment__avatar"></div>
-              <div>
-                <div class="comment__text"><strong>metallurg_pro</strong> Отличная работа! Какая толщина металла?</div>
-                <div class="comment__time">2ч</div>
+          <div class="post-comments" id="comments-post-2" hidden>
+            <div class="comments">
+              <div class="comment">
+                <div class="comment__avatar"></div>
+                <div>
+                  <div class="comment__text"><strong>metallurg_pro</strong> Отличная работа! Какая толщина металла?</div>
+                  <div class="comment__time">2ч</div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment__avatar"></div>
+                <div>
+                  <div class="comment__text"><strong>welding_master</strong> Профессионально выполнено 👍</div>
+                  <div class="comment__time">5ч</div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment__avatar"></div>
+                <div>
+                  <div class="comment__text"><strong>factory_line</strong> Очень чистый рез, без заусенцев. Класс!</div>
+                  <div class="comment__time">6ч</div>
+                </div>
               </div>
             </div>
-            <div class="comment">
-              <div class="comment__avatar"></div>
-              <div>
-                <div class="comment__text"><strong>welding_master</strong> Профессионально выполнено 👍</div>
-                <div class="comment__time">5ч</div>
-              </div>
-            </div>
-          </div>
 
-          <div class="comment-form">
-            <input type="text" placeholder="Добавьте комментарий..." />
-            <button type="button">Опубликовать</button>
+            <div class="comment-form">
+              <input type="text" placeholder="Добавьте комментарий..." />
+              <button type="button">Опубликовать</button>
+            </div>
           </div>
         </div>
       </section>
