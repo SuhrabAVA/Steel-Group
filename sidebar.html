@@ -17,7 +17,7 @@
     </div>
 
     <nav class="menu">
-      <a href="#" class="menu__item menu__item--active">
+      <a href="index.html" target="_top" class="menu__item" data-menu-link="feed">
         <span class="menu__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 10.5 12 3l9 7.5"></path>
@@ -50,7 +50,7 @@
         <span>Прайс</span>
       </a>
 
-      <a href="#" class="menu__item">
+      <a href="request.html" target="_top" class="menu__item" data-menu-link="request">
         <span class="menu__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -72,5 +72,14 @@
       </a>
     </div>
   </aside>
+
+  <script>
+    const current = new URLSearchParams(window.location.search).get('current');
+    if (current) {
+      document.querySelectorAll('[data-menu-link]').forEach((link) => {
+        link.classList.toggle('menu__item--active', link.dataset.menuLink === current);
+      });
+    }
+  </script>
 </body>
 </html>
