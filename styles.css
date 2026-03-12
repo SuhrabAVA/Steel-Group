@@ -1703,13 +1703,13 @@ input {
 .category-preview__sheet {
   position: relative;
   z-index: 1;
-  width: min(1220px, calc(100vw - 52px));
-  height: calc(100vh - 52px);
-  margin: 26px auto;
+  width: min(1120px, calc(100vw - 72px));
+  height: calc(100vh - 72px);
+  margin: 36px auto;
   border-radius: 34px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
+  grid-template-columns: minmax(0, 1fr) 360px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: #0a0b10;
   box-shadow: 0 26px 80px rgba(0, 0, 0, 0.55);
@@ -1745,6 +1745,7 @@ input {
   flex-direction: column;
   gap: 18px;
   position: relative;
+  overflow-y: auto;
 }
 
 .category-preview__close {
@@ -1790,7 +1791,7 @@ input {
 
 .category-preview h3 {
   margin: 8px 0 0;
-  font-size: 44px;
+  font-size: clamp(30px, 3vw, 40px);
   line-height: 1.12;
   letter-spacing: -0.02em;
 }
