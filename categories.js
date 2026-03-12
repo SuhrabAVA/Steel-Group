@@ -4,6 +4,17 @@ const galleryMasonry = document.getElementById('galleryMasonry');
 const galleryTitle = document.getElementById('galleryTitle');
 const galleryCloseButtons = document.querySelectorAll('[data-gallery-close]');
 
+const previewModal = document.getElementById('categoryPreview');
+const previewImage = document.getElementById('previewImage');
+const previewTitle = document.getElementById('previewTitle');
+const previewMeta = document.getElementById('previewMeta');
+const previewDescription = document.getElementById('previewDescription');
+const previewTags = document.getElementById('previewTags');
+const previewLikes = document.getElementById('previewLikes');
+const previewCloseButtons = document.querySelectorAll('[data-preview-close]');
+
+let activeCategory = null;
+
 const galleryByCategory = {
   welding: {
     title: 'Сварка — работы',
@@ -54,14 +65,14 @@ const galleryByCategory = {
     ]
   },
   construction: {
-    title: 'Металлоконструкции — работы',
+    title: 'Корзины для кондиционеров — работы',
     photos: [
-      { title: 'Сборка опор', likes: 523, image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80', height: 'tall' },
-      { title: 'Каркас корзины', likes: 299, image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80', height: 'short' },
-      { title: 'Готовые секции', likes: 435, image: 'https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&w=900&q=80', height: 'medium' },
-      { title: 'Объектная установка', likes: 358, image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=900&q=80', height: 'tall' },
-      { title: 'Сборка секции на производстве', likes: 315, image: 'https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&w=900&q=80', height: 'medium' },
-      { title: 'Ферма для промышленного объекта', likes: 441, image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Каркас корзины', likes: 384, image: 'https://images.unsplash.com/photo-1565791380707-1756b9a2f7f6?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Порошковая окраска', likes: 227, image: 'https://images.unsplash.com/photo-1581091226825-c6a89e7e4801?auto=format&fit=crop&w=900&q=80', height: 'short' },
+      { title: 'Монтаж фасадного блока', likes: 315, image: 'https://images.unsplash.com/photo-1521790361543-f645cf042ec4?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Секция на объекте', likes: 266, image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Блок из 20 корзин', likes: 432, image: 'https://images.unsplash.com/photo-1565791380707-1756b9a2f7f6?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Ребра жесткости', likes: 203, image: 'https://images.unsplash.com/photo-1521790361543-f645cf042ec4?auto=format&fit=crop&w=900&q=80', height: 'short' },
       { title: 'Антикоррозийная обработка', likes: 274, image: 'https://images.unsplash.com/photo-1473447198193-98c8f9dbaa8e?auto=format&fit=crop&w=900&q=80', height: 'short' }
     ]
   },
@@ -103,16 +114,22 @@ const galleryByCategory = {
   }
 };
 
+function makeDescription(photoTitle, categoryTitle) {
+  return `Подробное описание проекта «${photoTitle}». Работы выполнены в категории «${categoryTitle}» с соблюдением стандартов качества и сроков.`;
+}
+
 function renderGallery(categoryKey) {
   const payload = galleryByCategory[categoryKey];
   if (!payload || !galleryMasonry || !galleryTitle) return;
 
+  activeCategory = categoryKey;
   galleryTitle.textContent = payload.title;
   galleryMasonry.innerHTML = '';
 
-  payload.photos.forEach((photo) => {
+  payload.photos.forEach((photo, index) => {
     const item = document.createElement('article');
     item.className = `gallery-item gallery-item--${photo.height || 'medium'}`;
+    item.dataset.index = String(index);
 
     item.innerHTML = `
       <img src="${photo.image}" alt="${photo.title}" loading="lazy" />
@@ -127,7 +144,35 @@ function renderGallery(categoryKey) {
   });
 }
 
+function openPreview(photo) {
+  const payload = galleryByCategory[activeCategory];
+  if (!photo || !payload || !previewModal) return;
+
+  previewImage.src = photo.image;
+  previewImage.alt = photo.title;
+  previewTitle.textContent = photo.title;
+  previewMeta.textContent = `SteelGroup • ${payload.title.replace(' — работы', '')}`;
+  previewDescription.textContent = makeDescription(photo.title, payload.title);
+  previewLikes.textContent = String(photo.likes);
+
+  previewTags.innerHTML = '';
+  ['#steelgroup', '#metalwork', '#резка', '#industrial'].forEach((tag) => {
+    const chip = document.createElement('span');
+    chip.textContent = tag;
+    previewTags.appendChild(chip);
+  });
+
+  previewModal.classList.add('is-open');
+  previewModal.setAttribute('aria-hidden', 'false');
+}
+
+function closePreview() {
+  previewModal?.classList.remove('is-open');
+  previewModal?.setAttribute('aria-hidden', 'true');
+}
+
 function openGallery(categoryKey) {
+  closePreview();
   renderGallery(categoryKey);
   galleryModal?.classList.add('is-open');
   galleryModal?.setAttribute('aria-hidden', 'false');
@@ -135,6 +180,7 @@ function openGallery(categoryKey) {
 }
 
 function closeGallery() {
+  closePreview();
   galleryModal?.classList.remove('is-open');
   galleryModal?.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
@@ -146,11 +192,32 @@ categoryCards.forEach((card) => {
   });
 });
 
+galleryMasonry?.addEventListener('click', (event) => {
+  const item = event.target.closest('.gallery-item');
+  if (!item || !activeCategory) return;
+
+  const photoIndex = Number(item.dataset.index);
+  const photo = galleryByCategory[activeCategory]?.photos?.[photoIndex];
+  openPreview(photo);
+});
+
 galleryCloseButtons.forEach((button) => {
   button.addEventListener('click', closeGallery);
 });
 
+previewCloseButtons.forEach((button) => {
+  button.addEventListener('click', closePreview);
+});
+
 document.addEventListener('keydown', (event) => {
   if (!galleryModal?.classList.contains('is-open')) return;
-  if (event.key === 'Escape') closeGallery();
+
+  if (event.key === 'Escape') {
+    if (previewModal?.classList.contains('is-open')) {
+      closePreview();
+      return;
+    }
+
+    closeGallery();
+  }
 });
