@@ -17,7 +17,7 @@
       </section>
 
       <section class="categories-grid" aria-label="Категории услуг">
-        <article class="category-card">
+        <article class="category-card" data-category="welding">
           <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800&q=80" alt="Сварка металла" class="category-card__image" />
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
@@ -31,7 +31,7 @@
           </div>
         </article>
 
-        <article class="category-card">
+        <article class="category-card" data-category="cutting">
           <img src="https://images.unsplash.com/photo-1565061828011-58c8b9ba4f69?auto=format&fit=crop&w=800&q=80" alt="Лазерная резка" class="category-card__image" />
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
@@ -49,7 +49,7 @@
           </div>
         </article>
 
-        <article class="category-card">
+        <article class="category-card" data-category="bending">
           <img src="https://images.unsplash.com/photo-1581092160607-ee22731d8af8?auto=format&fit=crop&w=800&q=80" alt="Гибка металла" class="category-card__image" />
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
@@ -65,7 +65,7 @@
           </div>
         </article>
 
-        <article class="category-card">
+        <article class="category-card" data-category="painting">
           <img src="https://images.unsplash.com/photo-1592454428210-3e0d60149689?auto=format&fit=crop&w=800&q=80" alt="Покраска металла" class="category-card__image" />
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
@@ -80,7 +80,7 @@
           </div>
         </article>
 
-        <article class="category-card">
+        <article class="category-card" data-category="construction">
           <img src="https://images.unsplash.com/photo-1565791380707-1756b9a2f7f6?auto=format&fit=crop&w=800&q=80" alt="Металлоконструкции" class="category-card__image" />
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
@@ -96,7 +96,7 @@
           </div>
         </article>
 
-        <article class="category-card">
+        <article class="category-card" data-category="doors">
           <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Металлические двери" class="category-card__image" />
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
@@ -111,7 +111,7 @@
           </div>
         </article>
 
-        <article class="category-card">
+        <article class="category-card" data-category="brackets">
           <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=80" alt="Кронштейны" class="category-card__image" />
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
@@ -129,7 +129,7 @@
           </div>
         </article>
 
-        <article class="category-card">
+        <article class="category-card" data-category="custom">
           <img src="https://images.unsplash.com/photo-1582719478185-2196ac9f8bbf?auto=format&fit=crop&w=800&q=80" alt="Индивидуальный заказ" class="category-card__image" />
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
@@ -145,7 +145,20 @@
           </div>
         </article>
       </section>
+
+      <section class="category-gallery" id="categoryGallery" aria-hidden="true">
+        <div class="category-gallery__overlay" data-gallery-close></div>
+        <div class="category-gallery__content" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+          <header class="category-gallery__top">
+            <h2 id="galleryTitle">Галерея работ</h2>
+            <button class="category-gallery__close" type="button" aria-label="Закрыть" data-gallery-close>✕</button>
+          </header>
+          <div class="category-gallery__masonry" id="galleryMasonry"></div>
+        </div>
+      </section>
     </main>
   </div>
+
+  <script src="categories.js"></script>
 </body>
 </html>
