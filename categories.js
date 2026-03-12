@@ -11,7 +11,10 @@ const galleryByCategory = {
       { title: 'Сварной узел фермы', likes: 412, image: 'https://images.unsplash.com/photo-1581091226825-c6a89e7e4801?auto=format&fit=crop&w=900&q=80', height: 'tall' },
       { title: 'Точечная сварка', likes: 276, image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=80', height: 'medium' },
       { title: 'Шов из нержавейки', likes: 338, image: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80', height: 'short' },
-      { title: 'Монтаж каркаса', likes: 504, image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80', height: 'tall' }
+      { title: 'Монтаж каркаса', likes: 504, image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Сварка лестничного марша', likes: 367, image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Усиление несущего узла', likes: 289, image: 'https://images.unsplash.com/photo-1521790361543-f645cf042ec4?auto=format&fit=crop&w=900&q=80', height: 'short' },
+      { title: 'Стыковка балок', likes: 431, image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80', height: 'tall' }
     ]
   },
   cutting: {
@@ -20,7 +23,10 @@ const galleryByCategory = {
       { title: 'Плазменная резка деталей #2', likes: 363, image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80', height: 'medium' },
       { title: 'Листы после ЧПУ', likes: 228, image: 'https://images.unsplash.com/photo-1565791380707-1756b9a2f7f6?auto=format&fit=crop&w=900&q=80', height: 'tall' },
       { title: 'Точная нарезка', likes: 487, image: 'https://images.unsplash.com/photo-1565061828011-58c8b9ba4f69?auto=format&fit=crop&w=900&q=80', height: 'short' },
-      { title: 'Готовые контуры', likes: 312, image: 'https://images.unsplash.com/photo-1582719478185-2196ac9f8bbf?auto=format&fit=crop&w=900&q=80', height: 'medium' }
+      { title: 'Готовые контуры', likes: 312, image: 'https://images.unsplash.com/photo-1582719478185-2196ac9f8bbf?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Комплект заготовок', likes: 276, image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80', height: 'short' },
+      { title: 'Линия плазменной резки', likes: 401, image: 'https://images.unsplash.com/photo-1565061828011-58c8b9ba4f69?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Чистый рез без заусенцев', likes: 238, image: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80', height: 'medium' }
     ]
   },
   bending: {
@@ -29,7 +35,10 @@ const galleryByCategory = {
       { title: 'Гибка профиля', likes: 251, image: 'https://images.unsplash.com/photo-1581092160607-ee22731d8af8?auto=format&fit=crop&w=900&q=80', height: 'medium' },
       { title: 'Сложный угол', likes: 319, image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80', height: 'short' },
       { title: 'Партия заготовок', likes: 402, image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80', height: 'tall' },
-      { title: 'Проверка геометрии', likes: 198, image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80', height: 'medium' }
+      { title: 'Проверка геометрии', likes: 198, image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Гибка швеллера', likes: 257, image: 'https://images.unsplash.com/photo-1581092919535-7146ff1a590b?auto=format&fit=crop&w=900&q=80', height: 'short' },
+      { title: 'Пресс-операция серии', likes: 374, image: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Радиусный профиль', likes: 216, image: 'https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=900&q=80', height: 'medium' }
     ]
   },
   painting: {
@@ -38,7 +47,10 @@ const galleryByCategory = {
       { title: 'Порошковая камера', likes: 295, image: 'https://images.unsplash.com/photo-1592454428210-3e0d60149689?auto=format&fit=crop&w=900&q=80', height: 'tall' },
       { title: 'Цвет по RAL', likes: 211, image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80', height: 'short' },
       { title: 'Финишное покрытие', likes: 340, image: 'https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?auto=format&fit=crop&w=900&q=80', height: 'medium' },
-      { title: 'Сушка изделий', likes: 183, image: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80', height: 'medium' }
+      { title: 'Сушка изделий', likes: 183, image: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Покраска фасадных панелей', likes: 264, image: 'https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?auto=format&fit=crop&w=900&q=80', height: 'short' },
+      { title: 'Линия полимеризации', likes: 397, image: 'https://images.unsplash.com/photo-1592454428210-3e0d60149689?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Финишный контроль оттенка', likes: 229, image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80', height: 'medium' }
     ]
   },
   construction: {
@@ -47,7 +59,10 @@ const galleryByCategory = {
       { title: 'Сборка опор', likes: 523, image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80', height: 'tall' },
       { title: 'Каркас корзины', likes: 299, image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80', height: 'short' },
       { title: 'Готовые секции', likes: 435, image: 'https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&w=900&q=80', height: 'medium' },
-      { title: 'Объектная установка', likes: 358, image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=900&q=80', height: 'tall' }
+      { title: 'Объектная установка', likes: 358, image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Сборка секции на производстве', likes: 315, image: 'https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Ферма для промышленного объекта', likes: 441, image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Антикоррозийная обработка', likes: 274, image: 'https://images.unsplash.com/photo-1473447198193-98c8f9dbaa8e?auto=format&fit=crop&w=900&q=80', height: 'short' }
     ]
   },
   doors: {
@@ -56,7 +71,10 @@ const galleryByCategory = {
       { title: 'Входная дверь', likes: 207, image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80', height: 'medium' },
       { title: 'Сейфовая рама', likes: 271, image: 'https://images.unsplash.com/photo-1464107687427-40aa6f7a90f5?auto=format&fit=crop&w=900&q=80', height: 'tall' },
       { title: 'Порошковая эмаль', likes: 180, image: 'https://images.unsplash.com/photo-1565791380707-1756b9a2f7f6?auto=format&fit=crop&w=900&q=80', height: 'short' },
-      { title: 'Фурнитура и замки', likes: 324, image: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80', height: 'medium' }
+      { title: 'Фурнитура и замки', likes: 324, image: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Порошковое покрытие двери', likes: 233, image: 'https://images.unsplash.com/photo-1565791380707-1756b9a2f7f6?auto=format&fit=crop&w=900&q=80', height: 'short' },
+      { title: 'Монтаж дверного блока', likes: 379, image: 'https://images.unsplash.com/photo-1464107687427-40aa6f7a90f5?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Теплоизоляционный контур', likes: 261, image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80', height: 'medium' }
     ]
   },
   brackets: {
@@ -65,7 +83,10 @@ const galleryByCategory = {
       { title: 'Парные кронштейны', likes: 164, image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80', height: 'short' },
       { title: 'Усиленный узел', likes: 286, image: 'https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?auto=format&fit=crop&w=900&q=80', height: 'medium' },
       { title: 'Серийное производство', likes: 311, image: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80', height: 'tall' },
-      { title: 'Контроль качества', likes: 192, image: 'https://images.unsplash.com/photo-1582719478185-2196ac9f8bbf?auto=format&fit=crop&w=900&q=80', height: 'medium' }
+      { title: 'Контроль качества', likes: 192, image: 'https://images.unsplash.com/photo-1582719478185-2196ac9f8bbf?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Оцинкованные кронштейны', likes: 219, image: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80', height: 'short' },
+      { title: 'Узел крепления фасада', likes: 342, image: 'https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Комплект монтажных пластин', likes: 201, image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80', height: 'medium' }
     ]
   },
   custom: {
@@ -74,7 +95,10 @@ const galleryByCategory = {
       { title: 'Изделие по чертежу', likes: 453, image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80', height: 'tall' },
       { title: 'Нестандартный проект', likes: 369, image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80', height: 'medium' },
       { title: 'Примерка на объекте', likes: 244, image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80', height: 'short' },
-      { title: 'Готовое решение', likes: 507, image: 'https://images.unsplash.com/photo-1473447198193-98c8f9dbaa8e?auto=format&fit=crop&w=900&q=80', height: 'medium' }
+      { title: 'Готовое решение', likes: 507, image: 'https://images.unsplash.com/photo-1473447198193-98c8f9dbaa8e?auto=format&fit=crop&w=900&q=80', height: 'medium' },
+      { title: 'Архитектурный элемент', likes: 338, image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80', height: 'short' },
+      { title: 'Сборка по индивидуальному ТЗ', likes: 426, image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80', height: 'tall' },
+      { title: 'Проверка перед сдачей', likes: 288, image: 'https://images.unsplash.com/photo-1582719478185-2196ac9f8bbf?auto=format&fit=crop&w=900&q=80', height: 'medium' }
     ]
   }
 };
