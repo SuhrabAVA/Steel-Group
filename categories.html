@@ -154,6 +154,39 @@
             <button class="category-gallery__close" type="button" aria-label="Закрыть" data-gallery-close>✕</button>
           </header>
           <div class="category-gallery__masonry" id="galleryMasonry"></div>
+
+          <section class="category-preview" id="categoryPreview" aria-hidden="true">
+            <div class="category-preview__overlay" data-preview-close></div>
+            <article class="category-preview__sheet" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
+              <button class="category-preview__back" type="button" aria-label="Назад" data-preview-close>←</button>
+
+              <div class="category-preview__media">
+                <img id="previewImage" src="" alt="" loading="lazy" />
+              </div>
+
+              <div class="category-preview__panel">
+                <button class="category-preview__close" type="button" aria-label="Закрыть" data-preview-close>✕</button>
+
+                <div class="category-preview__author">
+                  <span class="category-preview__avatar">SG</span>
+                  <div>
+                    <strong>Steel Group Team</strong>
+                    <p id="previewMeta">SteelGroup • Проект</p>
+                  </div>
+                </div>
+
+                <h3 id="previewTitle">Название проекта</h3>
+                <p class="category-preview__description" id="previewDescription"></p>
+
+                <div class="category-preview__tags" id="previewTags"></div>
+
+                <footer class="category-preview__footer">
+                  <div class="category-preview__stats">❤ <span id="previewLikes">0</span></div>
+                  <button class="btn btn--accent" type="button">Заказать</button>
+                </footer>
+              </div>
+            </article>
+          </section>
         </div>
       </section>
     </main>
